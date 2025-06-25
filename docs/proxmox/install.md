@@ -34,6 +34,9 @@ linux /boot/linux26 root=/dev/ram0 ramdisk_size=16777216 rw quiet
 ```
 
 
+### 驱动包
+
+[virtio-win](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/)
 
 
 
