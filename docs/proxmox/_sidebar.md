@@ -9,8 +9,8 @@
 - [下载清单](/proxmox/downloadlist.md)
 - [显卡直通配置](/proxmox/graphics_card.md)
 - [异常处理](/proxmox/errornote.md)
-- [驱动说明](/proxmox/)
-<!-- - [](/proxmox/) -->
+- [驱动说明](/proxmox/control_help.md)
+- [设备设置](/proxmox/setting_devices.md)
 <!-- - [](/proxmox/) -->
 <!-- - [](/proxmox/) -->
 <!-- - [](/proxmox/) -->
