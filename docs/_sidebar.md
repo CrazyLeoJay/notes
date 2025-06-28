@@ -10,6 +10,8 @@
 ---
 
 - [网站开发](/web_site/README) 
+- [Proxmox VE虚拟机](/proxmox/README)
+- [开源项目使用记录](/opensources/README)
 
 ---
 
