@@ -13,6 +13,14 @@
 npm i docsify-cli -g
 ```
 
+## win权限策略异常
+
+> 使用管理员模式打开cmd
+
+```bat
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## 预览
 
 ```bash
