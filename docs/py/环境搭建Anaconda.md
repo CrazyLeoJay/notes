@@ -6,6 +6,12 @@
 - https://github.com/ContinuumIO
 - 下载路径：https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 
+
+
+## 环境变量配置
+
+`C:\ProgramData\anaconda3\Scripts`
+
 ## 配置文件
 
 路径 user_home/.condarc

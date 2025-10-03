@@ -7,6 +7,7 @@
 ## 文档
 
 - https://www.react-native.cn/
+- [React 中文文档](https://zh-hans.react.dev/learn)
 
 
 

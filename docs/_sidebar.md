@@ -1,10 +1,8 @@
 <!-- _sidebar.md -->
 
-* [**介绍**](README)
+* [**介绍**](/README)
 
-
-
-- [AI LLM](ai_llm/README) 
+- [AI LLM](/ai_llm/) 
 
 ---
 
@@ -13,6 +11,8 @@
 - [开源项目使用记录](/opensources/README)
 - [**Recat 开发**](/react/)
 - [自建项目](/my_dev/)
+- [WeChat微信相关开发](/wechat/)
+- [数据库搭建和配置](/database/)
 ---
 
 

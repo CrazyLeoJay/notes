@@ -7,13 +7,17 @@
 
 
 
-## docsify安装
+
+
+## 运行笔记
+
+#### `docsify`安装
 
 ```bash
 npm i docsify-cli -g
 ```
 
-## win权限策略异常
+#### win权限策略异常
 
 > 使用管理员模式打开cmd
 
@@ -21,8 +25,9 @@ npm i docsify-cli -g
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-## 预览
+#### 预览
 
 ```bash
 docsify serve docs
 ```
+
