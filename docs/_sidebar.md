@@ -2,22 +2,28 @@
 
 * [**介绍**](/README)
 
-- [AI LLM](/ai_llm/) 
-
 ---
 
 - [网站开发](/web_site/README) 
+  - [前端开发](/web_site/web/)
 - [Proxmox VE虚拟机](/proxmox/README)
 - [开源项目使用记录](/opensources/README)
 - [**Recat 开发**](/react/)
+- [AI LLM](/ai_llm/) 
 - [自建项目](/my_dev/)
 - [WeChat微信相关开发](/wechat/)
 - [数据库搭建和配置](/database/)
+- [密码：加解密](/security/README)
 ---
 
 
 - **Jvm 服务端开发**
-  -  [elastic 相关配置和部署](jvm_services/elastic.md) 
+  -  [elastic 相关配置和部署](java/services/elastic.md) 
+  -  [SpringBoot 笔记](/java/springboot/)
+
+---
+
+
 
 
 * **C++**

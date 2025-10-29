@@ -1,108 +1,118 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leojay笔记</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Description" />
+    <!-- 设置浏览器图标 -->
+    <link rel="icon" href="statics/img/lion.svg" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="https://librarycodes.gitee.io/docsify-plus/img/logo.ico" type="image/x-icon" /> -->
 
-<head>
-	<meta charset="UTF-8">
-	<title>Leojay笔记</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="Description">
-	<!-- 设置浏览器图标 -->
-	<link rel="icon" href="statics/img/lion.svg" type="image/x-icon" />
-	<!-- <link rel="shortcut icon" href="https://librarycodes.gitee.io/docsify-plus/img/logo.ico" type="image/x-icon" /> -->
+    <!-- 默认主题 -->
+    <link rel="stylesheet" href="statics/themes/vue.css" />
+    <!-- <link rel="stylesheet" href="/statics/themes/buble.css" /> -->
+    <!-- <link rel="stylesheet" href="/statics/themes/dark.css" /> -->
+    <!-- <link rel="stylesheet" href="/statics/themes/pure.css" /> -->
 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="light"> -->
+  </head>
 
-	<!-- 默认主题 -->
-	<link rel="stylesheet" href="statics/themes/vue.css">
-	<!-- <link rel="stylesheet" href="/statics/themes/buble.css" /> -->
-	<!-- <link rel="stylesheet" href="/statics/themes/dark.css" /> -->
-	<!-- <link rel="stylesheet" href="/statics/themes/pure.css" /> -->
+  <body>
+    <div data-app id="main">加载中</div>
+    <script>
+      // https://docsify.js.org/#/zh-cn/
+      window.$docsify = {
+        el: "#main",
+        // 项目名称
+        name: "Leojay笔记",
+        logo: "/statics/img/lion.svg",
+        // 项目图标
+        // logo: '/img/icon.svg',
+        // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
+        // repo: 'https://gitee.com/librarycodes/docsify-plus',
+        repo: "https://github.com/CrazyLeoJay",
+        // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
+        coverpage: true,
+        // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
+        loadSidebar: true,
+        // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+        loadNavbar: true,
+        // 最大支持渲染的标题层级
+        maxLevel: 3,
+        // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+        subMaxLevel: 2,
+        // 小屏设备下合并导航栏到侧边栏
+        mergeNavbar: true,
+        // 未找到页面 _404.md
+        notFoundPage: true,
+        // 启用相对路径
+        relativePath: true,
+        // 搜索配置
+        search: {
+          // 过期时间，单位毫秒，默认一天
+          maxAge: 86400000,
+          // 注意：仅适用于 paths: 'auto' 模式
+          paths: "auto",
+          // 支持本地化
+          placeholder: {
+            "/": "搜索",
+            // '/zh-en/': 'Type to search'
+          },
+          noData: {
+            "/": "找不到结果",
+            // '/zh-en/': 'No Results'
+          },
+          depth: 4,
+          hideOtherSidebarContent: false,
+          namespace: "Docsify-Guide",
+        },
 
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+        formatUpdated: function (time) {
+          return time;
+        },
+        // 目标是在 markdown 中打开外部链接。默认'_blank'（新窗口/标签）
+        externalLinkTarget: "_blank", // default: '_blank' '_self'
+        mermaidConfig: {
+          querySelector: ".mermaid",
+        },
+      };
+    </script>
+    <!-- docsify的js依赖 -->
+    <script src="statics/docsify.min.js"></script>
+    <!-- emoji表情支持 -->
+    <script src="statics/emoji.min.js"></script>
+    <!-- 图片放大缩小支持 -->
+    <script src="statics/zoom-image.min.js"></script>
+    <!-- 搜索功能支持 -->
+    <script src="statics/search.min.js"></script>
+    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+    <script src="statics/docsify-copy-code.min.js"></script>
+    <!-- 分页导航 -->
+    <script src="statics/docsify-pagination.min.js"></script>
+    <!-- 外部脚本 如果页面上的脚本是外部脚本（通过src属性导入 js 文件） -->
+    <script src="statics/plugins/external-script.min.js"></script>
+    <!-- 插件列表 -->
+    <script src="statics/components/prism-bash.min.js"></script>
+    <script src="statics/components/prism-php.min.js"></script>
+    <script src="statics/components/prism-java.min.js"></script>
+    <script src="statics/components/prism-python.min.js"></script>
 
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="light"> -->
+    <!-- mermaid 图表生成 -->
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
+      window.mermaid = mermaid;
+    </script>
+    <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
 
+    <!-- 时序图插件 编码：websequencediagrams -->
+    <!-- <script src="statics/plugins/docsify-websequencediagrams.js"></script> -->
+    <!-- 时序图2 编码： swimlanes-io -->
+    <!-- <script src="statics/plugins/docsify-swimlanes-io.js"></script>  -->
 
-</head>
-
-<body>
-	<div data-app id="main">加载中</div>
-	<script>
-		// https://docsify.js.org/#/zh-cn/
-		window.$docsify = {
-			el: '#main',
-			// 项目名称
-			name: 'Leojay笔记',
-			logo: '/statics/img/lion.svg',
-			// 项目图标
-			// logo: '/img/icon.svg',
-			// 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-			// repo: 'https://gitee.com/librarycodes/docsify-plus',
-			repo: 'https://github.com/CrazyLeoJay',
-			// 封面支持，默认加载的是项目根目录下的_coverpage.md文件
-			coverpage: true,
-			// 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
-			loadSidebar: true,
-			// 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
-			loadNavbar: true,
-			// 最大支持渲染的标题层级
-			maxLevel: 3,
-			// 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
-			subMaxLevel: 2,
-			// 小屏设备下合并导航栏到侧边栏
-			mergeNavbar: true,
-			// 未找到页面 _404.md
-			notFoundPage: true,
-			// 启用相对路径
-			relativePath: true,
-			// 搜索配置
-			search: {
-				// 过期时间，单位毫秒，默认一天
-				maxAge: 86400000,
-				// 注意：仅适用于 paths: 'auto' 模式
-				paths: "auto",
-				// 支持本地化
-				placeholder: {
-					'/': '搜索',
-					// '/zh-en/': 'Type to search'
-				},
-				noData: {
-					'/': '找不到结果',
-					// '/zh-en/': 'No Results'
-				},
-				depth: 4,
-				hideOtherSidebarContent: false,
-				namespace: 'Docsify-Guide',
-			},
-
-			formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
-			formatUpdated: function (time) {
-				return time;
-			},
-			// 目标是在 markdown 中打开外部链接。默认'_blank'（新窗口/标签）
-			externalLinkTarget: '_blank', // default: '_blank' '_self'
-		}
-	</script>
-	<!-- docsify的js依赖 -->
-	<script src="statics/docsify.min.js"></script>
-	<!-- emoji表情支持 -->
-	<script src="statics/emoji.min.js"></script>
-	<!-- 图片放大缩小支持 -->
-	<script src="statics/zoom-image.min.js"></script>
-	<!-- 搜索功能支持 -->
-	<script src="statics/search.min.js"></script>
-	<!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
-	<script src="statics/docsify-copy-code.min.js"></script>
-	<!-- 分页导航 -->
-	<script src="statics/docsify-pagination.min.js"></script>
-	<!-- 外部脚本 如果页面上的脚本是外部脚本（通过src属性导入 js 文件） -->
-	<script src="statics/plugins/external-script.min.js"></script>
-	<!-- 插件列表 -->
-	<script src="statics/components/prism-bash.min.js"></script>
-	<script src="statics/components/prism-php.min.js"></script>
-	<script src="statics/components/prism-java.min.js"></script>
-	<script src="statics/components/prism-python.min.js"></script>
-
-	<!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
-</body>
-
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+  </body>
 </html>

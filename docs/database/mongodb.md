@@ -3,7 +3,10 @@
 - [MongoDB官方文档](https://www.mongodb.com/zh-cn/docs/)
 - Docker Image: [mongodb/mongodb-community-server](https://hub.docker.com/r/mongodb/mongodb-community-server)
 - [安装 MongoDB](https://www.mongodb.com/zh-cn/docs/manual/installation/)
-- 
+
+
+
+有专门的客户端连接工具，可以去官网下载
 
 | 平台    | Tutorial                                                     |
 | :------ | :----------------------------------------------------------- |
@@ -19,8 +22,15 @@ services:
   db_mongodb:
     image: mongodb/mongodb-community-server:8.2-ubi9
     restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=pass
     ports:
-      - 27017:27010
+      - "27017:27017"
+    #    volumes:
+    #      - type: bind
+    #        source: ./data
+    #        target: /data/db
 ```
 
 

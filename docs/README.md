@@ -13,6 +13,9 @@
 
 #### `docsify`安装
 
+- [官网](https://docsify.js.org/)
+- [中文文档](https://docsify.js.org/#/zh-cn/)
+
 ```bash
 npm i docsify-cli -g
 ```
