@@ -14,16 +14,24 @@
 - [WeChat微信相关开发](/wechat/)
 - [数据库搭建和配置](/database/)
 - [密码：加解密](/security/README)
+- [Linux 服务笔记](/linux/)
 ---
 
 
 - **Jvm 服务端开发**
   -  [elastic 相关配置和部署](java/services/elastic.md) 
   -  [SpringBoot 笔记](/java/springboot/)
+- 微服务
+
+  - [Nacos](/nacos/README.md) 
 
 ---
 
+- 未归类记录
+  -  [gitlab-docker-compose 部署和最简优化](other\gitlab-docker-compose.md)  
+  - [JavaFx 快速使用方案](other\javafx.md) 
 
+---
 
 
 * **C++**
