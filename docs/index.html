@@ -10,6 +10,15 @@
     <link rel="icon" href="statics/img/lion.svg" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="https://librarycodes.gitee.io/docsify-plus/img/logo.ico" type="image/x-icon" /> -->
 
+    <!-- Core Theme -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/core-dark.min.css"
+    />
     <!-- 默认主题 -->
     <link rel="stylesheet" href="statics/themes/vue.css" />
     <!-- <link rel="stylesheet" href="/statics/themes/buble.css" /> -->
@@ -20,7 +29,7 @@
   </head>
 
   <body>
-    <div data-app id="main">加载中</div>
+    <div data-app id="main" class="core-dark">加载中</div>
     <script>
       // https://docsify.js.org/#/zh-cn/
       window.$docsify = {
@@ -102,7 +111,7 @@
 
     <!-- mermaid 图表生成 -->
     <script type="module">
-      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true });
       window.mermaid = mermaid;
     </script>
