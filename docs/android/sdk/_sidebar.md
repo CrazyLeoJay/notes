@@ -13,7 +13,7 @@
 
 - **SDK 通用技术实现**
 
-* [注解编程在SDK中应用](annotation)
+* [注解编程在SDK中应用](processor.md)
 * [自动注册插件设计](sdk-plugin-auto-register.md)
 * [通过动态代理注册功能](dynamic-proxy-register.md)
 * [热更新](hot-update.md)
