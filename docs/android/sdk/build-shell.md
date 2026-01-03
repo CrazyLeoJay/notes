@@ -7,6 +7,9 @@
 - 修复bug
 - 更新SDK
 - 注入新功能
+- 给自动打包服务提供核心服务支持
+- 支持手动构建打包
+- 提高手动构建打包的效率
 
 等目的。
 
@@ -54,7 +57,7 @@ public.xml涉及到资源ID分配，下一节会讲到。
 
 ### 合并的资源ID处理
 
-将不同资源包的res、assets资源合并后，还需要处理代码或者`*.xml`中引用的资源ID。
+将不同资源包的res、assets、libs资源合并后，还需要处理代码或者`*.xml`中引用的资源ID。
 
 一些名词定义：
 
@@ -162,6 +165,8 @@ apksigner verify [options] app-name.apk
 
 - https://tech.meituan.com/2017/01/13/android-apk-v2-signature-scheme.html
 - https://github.com/Meituan-Dianping/walle
+
+如果通过修改包内参数来分发，如果有上百上千个包，那所需要的时间成本太高了。而Walle是通过给签名写入参数，具体原理可以看美团的文档，一两百兆的文件基本上几毫秒一个。然后可以通过walle SDK获取渠道ID。
 
 由于Walle写入会影响到签名，所以对于不同版本的签名工具，可能会出现不支持的情况，轻则导致无法获取，重则导致Apk无法安装，在选定版本后，需要做多次的测试，确保是可以正常使用的。
 
