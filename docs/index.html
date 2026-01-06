@@ -11,16 +11,8 @@
     <!-- <link rel="shortcut icon" href="https://librarycodes.gitee.io/docsify-plus/img/logo.ico" type="image/x-icon" /> -->
 
     <!-- Core Theme -->
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/core-dark.min.css"
-    />
     <!-- 默认主题 -->
-    <link rel="stylesheet" href="statics/themes/vue.css" />
+    <link rel="stylesheet" href="/statics/themes/vue.css" />
     <!-- <link rel="stylesheet" href="/statics/themes/buble.css" /> -->
     <!-- <link rel="stylesheet" href="/statics/themes/dark.css" /> -->
     <!-- <link rel="stylesheet" href="/statics/themes/pure.css" /> -->
@@ -90,6 +82,7 @@
       };
     </script>
     <!-- docsify的js依赖 -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
     <script src="statics/docsify.min.js"></script>
     <!-- emoji表情支持 -->
     <script src="statics/emoji.min.js"></script>
@@ -115,10 +108,11 @@
     <!-- mermaid 图表生成 -->
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      // import mermaid from "/statics/plugins/mermaid/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true });
       window.mermaid = mermaid;
     </script>
-    <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+    <script src="/statics/plugins/mermaid/docsify-mermaid.js"></script>
 
     <!-- 时序图插件 编码：websequencediagrams -->
     <!-- <script src="statics/plugins/docsify-websequencediagrams.js"></script> -->

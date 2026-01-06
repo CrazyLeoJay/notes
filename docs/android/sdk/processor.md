@@ -41,6 +41,8 @@ class SingleProcessor : AbstractProcessor() {
 
 这里用到了 `@AutoService(Processor::class)`，它会自动生成`classpath:META-INF/services/javax.annotation.processing.Processor`文件，这个文件中会生成`SingleProcessor`类全路径。这样在依赖时使用 annotationProcessor 或者 kapt（主要针对Kotlin语言） 导入时，会执行process方法。
 
+主要是 AbstractProcessor 它实现了 Processor接口，并且在依赖中设置为注解时会自动调用该代码。
+
 ## 依赖
 
 注解使用了以下库，根据需要生成的语言进行自主选择：

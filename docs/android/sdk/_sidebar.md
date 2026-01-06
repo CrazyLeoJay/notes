@@ -15,7 +15,7 @@
 
 * [注解编程在SDK中应用](processor.md)
 * [自动注册插件设计](sdk-plugin-auto-register.md)
-* [通过动态代理注册功能](dynamic-proxy-register.md)
+* [通过动态代理进行模块化设计](dynamic-proxy-register.md)
 * [热更新](hot-update.md)
 * [Android SDK tools](android-sdk-tools.md)
 * 
