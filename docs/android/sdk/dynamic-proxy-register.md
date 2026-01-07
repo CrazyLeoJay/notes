@@ -4,6 +4,8 @@
 >
 > 我这里是通过 模块化进行定义，通过动态代理进行实现。
 
+可以参考项目 [sdk-auto-services](https://github.com/CrazyLeoJay/sdk-auto-services)，可以分析下代码，代码量不多，没有复杂的东西。
+
 
 
 ## 模块化定义
@@ -30,4 +32,22 @@
 
 
 ## 动态代理实现
+
+模块定义好了，接下来通过动态代理去实现调用。
+
+这里区别于代理，是**动态**代理。动态体现在，具体的实例调用是在调用方法时才选择。
+
+java 反射包中有个类 `java.lang.reflect.Proxy`，通过这个类实例化的接口，可以在调用时获取到调用方法的反射对象：`java.lang.reflect.Method`，通过反射对象可以获取到：
+
+- 调用的方法是哪个接口类定义的。并且获取Class对象。
+- 该方法的传入参数
+- 方法的注解
+
+如果是多继承接口，` method.declaringClass`会直接返回集成的接口类型。
+
+通过这种方式，我保存一个以工厂接口类为key的map。通过key可以直接获取到预先定义好的对象进行调用实现。例如[代码 ModulesHelper类的moduleData定义和实现](https://github.com/CrazyLeoJay/sdk-auto-services/blob/master/utils/src/main/kotlin/site/leojay/auto/services/utils/ModulesHelper.kt#L18)。
+
+对于如何调用在类 [ProxyHelperBuilder proxyEntity  对象](https://github.com/CrazyLeoJay/sdk-auto-services/blob/master/utils/src/main/kotlin/site/leojay/auto/services/utils/ProxyHelperBuilder.kt#L33) 中有具体实现，这里我没有直接返回其值，而是定义了一个默认的实现，如果这个实现没有传入，那么我会预设一个null返回的空实现实例。因为SDK有时候同一个工厂会有多个实现，如果有返回值不知道走那个，而且SDK场景通过方法直接返回的场景还是不怎么多大，所以可以使用默认替代。但如果某些工厂需要直接返回可以额外定义，但会增加代码的复杂程度需要自己把握好度。
+
+
 
